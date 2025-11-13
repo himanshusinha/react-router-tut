@@ -3,7 +3,7 @@ import Home from "./Home";
 import About from "./About";
 import Login from "./Login";
 import NavBar from "./NavBar";
-import PageNotFound from "./PageNotFound";
+// import PageNotFound from "./PageNotFound";
 
 function App() {
   return (
