@@ -7,7 +7,7 @@ import College from "./College";
 import Student from "./Student";
 import Departments from "./Departments";
 import CollegeDetails from "./CollegeDetails";
-// import PageNotFound from "./PageNotFound";
+import PageNotFound from "./PageNotFound";
 
 function App() {
   return (
@@ -16,16 +16,20 @@ function App() {
       <Routes>
         <Route element={<NavBar />}>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="in">
+            <Route path="/in/user">
+              <Route path="/in/user/about" element={<About />} />
+              <Route path="/in/user/login" element={<Login />} />
+            </Route>
+          </Route>
         </Route>
-        {/* <Route path="/*" element={<PageNotFound />} /> */}
+
         <Route path="/college" element={<College />}>
           <Route index element={<Student />} />
           <Route path="departments" element={<Departments />} />
           <Route path="collegeDetails" element={<CollegeDetails />} />
         </Route>
-        <Route path="/*" element={<Navigate to="/login" />} />
+        <Route path="/*" element={<PageNotFound />} />
       </Routes>
     </>
   );
