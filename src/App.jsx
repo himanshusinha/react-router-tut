@@ -8,6 +8,8 @@ import Student from "./Student";
 import Departments from "./Departments";
 import CollegeDetails from "./CollegeDetails";
 import PageNotFound from "./PageNotFound";
+import Users from "./Users";
+import UserDetails from "./UserDetails";
 
 function App() {
   return (
@@ -16,6 +18,9 @@ function App() {
       <Routes>
         <Route element={<NavBar />}>
           <Route path="/" element={<Home />} />
+          <Route path="/users" element={<Users />} />
+          <Route path="/users/:id" element={<UserDetails />} />
+
           <Route path="in">
             <Route path="/in/user">
               <Route path="/in/user/about" element={<About />} />
