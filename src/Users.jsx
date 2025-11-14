@@ -33,6 +33,15 @@ const Users = () => {
           </h3>
         </div>
       ))}
+
+      <h1>User List Page With Page URL</h1>
+      {usersData.map((item, index) => (
+        <div key={index}>
+          <h3>
+            <Link to={"/users/" + item.id + "/" + item.name}>{item.name}</Link>
+          </h3>
+        </div>
+      ))}
     </div>
   );
 };

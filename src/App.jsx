@@ -10,6 +10,8 @@ import CollegeDetails from "./CollegeDetails";
 import PageNotFound from "./PageNotFound";
 import Users from "./Users";
 import UserDetails from "./UserDetails";
+import List from "./List";
+import UsersList from "./List";
 
 function App() {
   return (
@@ -19,7 +21,8 @@ function App() {
         <Route element={<NavBar />}>
           <Route path="/" element={<Home />} />
           <Route path="/users" element={<Users />} />
-          <Route path="/users/:id" element={<UserDetails />} />
+          <Route path="/users/:id/:name?" element={<UserDetails />} />
+          <Route path="/users/list?" element={<UsersList />} />
 
           <Route path="in">
             <Route path="/in/user">
