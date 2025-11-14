@@ -5,7 +5,10 @@ function College() {
   return (
     <div className="college" style={{ textAlign: "center" }}>
       <h1>College Page</h1>
-      <NavLink className="link" to="student">
+      <h3>
+        <Link to="/">Go back to home</Link>
+      </h3>
+      <NavLink className="link" to="">
         Student
       </NavLink>
       <NavLink className="link" to="departments">
@@ -14,6 +17,7 @@ function College() {
       <NavLink className="link" to="collegeDetails">
         College Details
       </NavLink>
+
       <Outlet />
     </div>
   );

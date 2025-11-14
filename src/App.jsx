@@ -12,14 +12,16 @@ import CollegeDetails from "./CollegeDetails";
 function App() {
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/login" element={<Login />} />
+        <Route element={<NavBar />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+        </Route>
         {/* <Route path="/*" element={<PageNotFound />} /> */}
         <Route path="/college" element={<College />}>
-          <Route path="student" element={<Student />} />
+          <Route index element={<Student />} />
           <Route path="departments" element={<Departments />} />
           <Route path="collegeDetails" element={<CollegeDetails />} />
         </Route>
